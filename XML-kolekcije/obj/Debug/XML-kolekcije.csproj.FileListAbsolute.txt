@@ -1,0 +1,11 @@
+C:\Users\piero\Documents\School\4.d\NiOP\XML-kolekcije\XML-kolekcije\bin\Debug\XML-kolekcije.exe.config
+C:\Users\piero\Documents\School\4.d\NiOP\XML-kolekcije\XML-kolekcije\bin\Debug\XML-kolekcije.exe
+C:\Users\piero\Documents\School\4.d\NiOP\XML-kolekcije\XML-kolekcije\bin\Debug\XML-kolekcije.pdb
+C:\Users\piero\Documents\School\4.d\NiOP\XML-kolekcije\XML-kolekcije\obj\Debug\XML-kolekcije.csproj.AssemblyReference.cache
+C:\Users\piero\Documents\School\4.d\NiOP\XML-kolekcije\XML-kolekcije\obj\Debug\XML-kolekcije.csproj.SuggestedBindingRedirects.cache
+C:\Users\piero\Documents\School\4.d\NiOP\XML-kolekcije\XML-kolekcije\obj\Debug\XML_kolekcije.Form1.resources
+C:\Users\piero\Documents\School\4.d\NiOP\XML-kolekcije\XML-kolekcije\obj\Debug\XML_kolekcije.Properties.Resources.resources
+C:\Users\piero\Documents\School\4.d\NiOP\XML-kolekcije\XML-kolekcije\obj\Debug\XML-kolekcije.csproj.GenerateResource.cache
+C:\Users\piero\Documents\School\4.d\NiOP\XML-kolekcije\XML-kolekcije\obj\Debug\XML-kolekcije.csproj.CoreCompileInputs.cache
+C:\Users\piero\Documents\School\4.d\NiOP\XML-kolekcije\XML-kolekcije\obj\Debug\XML-kolekcije.exe
+C:\Users\piero\Documents\School\4.d\NiOP\XML-kolekcije\XML-kolekcije\obj\Debug\XML-kolekcije.pdb
