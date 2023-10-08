@@ -9,3 +9,14 @@ C:\Users\piero\Documents\School\4.d\NiOP\XML-kolekcije\XML-kolekcije\obj\Debug\X
 C:\Users\piero\Documents\School\4.d\NiOP\XML-kolekcije\XML-kolekcije\obj\Debug\XML-kolekcije.csproj.CoreCompileInputs.cache
 C:\Users\piero\Documents\School\4.d\NiOP\XML-kolekcije\XML-kolekcije\obj\Debug\XML-kolekcije.exe
 C:\Users\piero\Documents\School\4.d\NiOP\XML-kolekcije\XML-kolekcije\obj\Debug\XML-kolekcije.pdb
+C:\Users\Piero\Documents\School\4.d\NiOP\Kolekcije-vozila\XML-kolekcije\bin\Debug\XML-kolekcije.exe.config
+C:\Users\Piero\Documents\School\4.d\NiOP\Kolekcije-vozila\XML-kolekcije\bin\Debug\XML-kolekcije.exe
+C:\Users\Piero\Documents\School\4.d\NiOP\Kolekcije-vozila\XML-kolekcije\bin\Debug\XML-kolekcije.pdb
+C:\Users\Piero\Documents\School\4.d\NiOP\Kolekcije-vozila\XML-kolekcije\obj\Debug\XML-kolekcije.csproj.AssemblyReference.cache
+C:\Users\Piero\Documents\School\4.d\NiOP\Kolekcije-vozila\XML-kolekcije\obj\Debug\XML-kolekcije.csproj.SuggestedBindingRedirects.cache
+C:\Users\Piero\Documents\School\4.d\NiOP\Kolekcije-vozila\XML-kolekcije\obj\Debug\XML_kolekcije.Form1.resources
+C:\Users\Piero\Documents\School\4.d\NiOP\Kolekcije-vozila\XML-kolekcije\obj\Debug\XML_kolekcije.Properties.Resources.resources
+C:\Users\Piero\Documents\School\4.d\NiOP\Kolekcije-vozila\XML-kolekcije\obj\Debug\XML-kolekcije.csproj.GenerateResource.cache
+C:\Users\Piero\Documents\School\4.d\NiOP\Kolekcije-vozila\XML-kolekcije\obj\Debug\XML-kolekcije.csproj.CoreCompileInputs.cache
+C:\Users\Piero\Documents\School\4.d\NiOP\Kolekcije-vozila\XML-kolekcije\obj\Debug\XML-kolekcije.exe
+C:\Users\Piero\Documents\School\4.d\NiOP\Kolekcije-vozila\XML-kolekcije\obj\Debug\XML-kolekcije.pdb
