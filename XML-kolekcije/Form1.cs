@@ -14,6 +14,11 @@ namespace XML_kolekcije
 {
     public partial class Form1 : Form
     {
+        List<Vozilo> vozila = new List<Vozilo>();
+        Motocikl motor;
+        Automobil auto;
+        Kamion kamion;
+
         public Form1()
         {
             InitializeComponent();
@@ -52,6 +57,55 @@ namespace XML_kolekcije
                 }
             }
             catch (FormatException ex) { }
+        }
+
+        private void txtIspisClicked(object sender, EventArgs e)
+        {
+            this.ActiveControl= null;
+        }
+
+        private void btnObrada_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(txtKotac.Text) == 2)
+            {
+                this.motor = new Motocikl(txtModel.Text, Convert.ToInt32(txtKotac.Text), Convert.ToInt64(txtGod.Text));
+            }
+            else if (Convert.ToInt32(txtKotac.Text) == 4)
+            {
+                this.auto = new Automobil(txtModel.Text, Convert.ToInt32(txtKotac.Text), Convert.ToInt64(txtGod.Text));
+            }
+            else if(Convert.ToInt32(txtKotac.Text)>4)
+            {
+                this.kamion = new Kamion(txtModel.Text, Convert.ToInt32(txtKotac.Text),Convert.ToInt64(txtGod.Text));
+            }
+        }
+
+        private void btnUnos_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(txtKotac.Text) == 2)
+            {
+                vozila.Add(motor);
+            }
+            else if (Convert.ToInt32(txtKotac.Text) == 4)
+            {
+                vozila.Add(auto);
+            }
+            else if (Convert.ToInt32(txtKotac.Text) > 4)
+            {
+                vozila.Add(kamion);
+            }
+
+            txtModel.Clear();
+            txtGod.Clear();
+            txtKotac.Clear();
+        }
+
+        private void btnIspis_Click(object sender, EventArgs e)
+        {
+            foreach(var vozilo in vozila)
+            {
+                txtIspis.AppendText(vozilo.ToString());
+            }
         }
     }
 }

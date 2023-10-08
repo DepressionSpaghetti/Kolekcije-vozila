@@ -12,40 +12,45 @@ namespace XML_kolekcije
         int brKotaca;
         long godina;
 
-        public Vozilo(string model, string kategorija, int brKotaca, long godina)
+        public Vozilo(string model, int brKotaca, long godina)
         {
             this.model = model;
-            this.kategorija = kategorija;
             this.brKotaca = brKotaca;
             this.godina = godina;
         }
 
-        string Model { get => model; set => model = value; }
-        string Kategorija { get => kategorija; set => kategorija = value; }
-        int BrKotaca { get => brKotaca; set => brKotaca = value; }
-        long Godina { get => godina; set => godina = value; }
+        public string Model { get => model; set => model = value; }
+        public string Kategorija { get => kategorija; set => kategorija = value; }
+        public int BrKotaca { get => brKotaca; set => brKotaca = value; }
+        public long Godina { get => godina; set => godina = value; }
+
+        public override string ToString()
+        {
+            string ispis = "Model: " + Model + "\nKategorija: " + Kategorija + "\nBroj kotaca: " + BrKotaca + "\nGodina: " + Godina + "\n\n";
+            return ispis;
+        }
 
     }
     class Motocikl : Vozilo
     {
-        public Motocikl(string model, string kategorija, int brKotaca, long godina) : base(model, kategorija,brKotaca, godina)
+        public Motocikl(string model, int brKotaca, long godina) : base(model, brKotaca, godina)
         {
-            kategorija = "Motocikl";
+            this.Kategorija = "Motocikl";
         }
     }
     class Automobil : Vozilo
     {
-        public Automobil(string model, string kategorija, int brKotaca, long godina) : base(model, kategorija, brKotaca, godina)
+        public Automobil(string model, int brKotaca, long godina) : base(model, brKotaca, godina)
         {
-            kategorija = "Automobil";
+            this.Kategorija = "Automobil";
         }
 
     }
     class Kamion : Vozilo
     {
-        public Kamion(string model, string kategorija, int brKotaca, long godina) : base(model, kategorija, brKotaca, godina)
+        public Kamion(string model, int brKotaca, long godina) : base(model, brKotaca, godina)
         {
-            kategorija = "Kamion";
+            this.Kategorija = "Kamion";
         }
     }
 }
