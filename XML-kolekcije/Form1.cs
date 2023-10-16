@@ -66,38 +66,47 @@ namespace XML_kolekcije
 
         private void btnObrada_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(txtKotac.Text) == 2)
+            try
             {
-                this.motor = new Motocikl(txtModel.Text, Convert.ToInt32(txtKotac.Text), Convert.ToInt64(txtGod.Text));
+                if (Convert.ToInt32(txtKotac.Text) == 2)
+                {
+                    this.motor = new Motocikl(txtModel.Text, Convert.ToInt32(txtKotac.Text), Convert.ToInt64(txtGod.Text));
+                }
+                else if (Convert.ToInt32(txtKotac.Text) == 4)
+                {
+                    this.auto = new Automobil(txtModel.Text, Convert.ToInt32(txtKotac.Text), Convert.ToInt64(txtGod.Text));
+                }
+                else if (Convert.ToInt32(txtKotac.Text) > 4)
+                {
+                    this.kamion = new Kamion(txtModel.Text, Convert.ToInt32(txtKotac.Text), Convert.ToInt64(txtGod.Text));
+                }
             }
-            else if (Convert.ToInt32(txtKotac.Text) == 4)
-            {
-                this.auto = new Automobil(txtModel.Text, Convert.ToInt32(txtKotac.Text), Convert.ToInt64(txtGod.Text));
-            }
-            else if(Convert.ToInt32(txtKotac.Text)>4)
-            {
-                this.kamion = new Kamion(txtModel.Text, Convert.ToInt32(txtKotac.Text),Convert.ToInt64(txtGod.Text));
-            }
+            catch (FormatException ex) { }
         }
 
         private void btnUnos_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(txtKotac.Text) == 2)
+            try
             {
-                vozila.Add(motor);
-            }
-            else if (Convert.ToInt32(txtKotac.Text) == 4)
-            {
-                vozila.Add(auto);
-            }
-            else if (Convert.ToInt32(txtKotac.Text) > 4)
-            {
-                vozila.Add(kamion);
-            }
+                if (Convert.ToInt32(txtKotac.Text) == 2)
+                {
+                    vozila.Add(motor);
+                }
+                else if (Convert.ToInt32(txtKotac.Text) == 4)
+                {
+                    vozila.Add(auto);
+                }
+                else if (Convert.ToInt32(txtKotac.Text) > 4)
+                {
+                    vozila.Add(kamion);
+                }
 
-            txtModel.Clear();
-            txtGod.Clear();
-            txtKotac.Clear();
+                txtModel.Clear();
+                txtGod.Clear();
+                txtKotac.Clear();
+            }
+            catch (FormatException ex) { }
+
         }
 
         private void btnIspis_Click(object sender, EventArgs e)
