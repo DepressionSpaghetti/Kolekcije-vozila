@@ -18,6 +18,7 @@ namespace XML_kolekcije
             this.brKotaca = brKotaca;
             this.godina = godina;
         }
+        public Vozilo() { }
 
         public string Model { get => model; set => model = value; }
         public string Kategorija { get => kategorija; set => kategorija = value; }
