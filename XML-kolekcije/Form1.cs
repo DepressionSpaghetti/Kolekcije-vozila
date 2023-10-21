@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace XML_kolekcije
@@ -22,6 +25,52 @@ namespace XML_kolekcije
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            var file = new FileInfo(@"baza\vozila.xml");
+            if(file.Length>0)
+            {
+
+            }
+
+        }
+
+        private void Load_XML()
+        {
+            var document = XDocument.Load(@"baza\vozila.xml");
+
+            var vozila = document.Root.Descendants("Vozilo")
+                .Select(x=>new Vozilo
+                {
+                    Model = x.Element("Model").Value,
+                    BrKotaca = Convert.ToInt32(x.Element("BrKotaca").Value),
+
+                })
+            
+        }
+
+        private void Main_Close(object sender, EventArgs e)
+        {
+            StvoriXML();
+        }
+
+        private void StvoriXML()
+        {
+            XDocument document = XDocument.Load(@"baza\vozila.xml");
+
+            var dokumentXmlVozila = new XDocument(new XElement("Vozila",
+                from vozilo in vozila
+                select new XElement("Vozilo",
+                    new XElement("Model", vozilo.Model),
+                    new XElement("BrKotaca", vozilo.BrKotaca),
+                    new XElement("Godina", vozilo.Godina),
+                    new XElement("Kategorija", vozilo.Kategorija)
+                    )));
+
+            document.Save(Convert.ToString(dokumentXmlVozila));
+
         }
 
         private void txtGod_TextChanged(object sender, EventArgs e)
@@ -116,5 +165,7 @@ namespace XML_kolekcije
                 txtIspis.AppendText(vozilo.ToString());
             }
         }
+
+
     }
 }
