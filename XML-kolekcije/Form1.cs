@@ -10,6 +10,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -29,47 +30,53 @@ namespace XML_kolekcije
 
         private void Main_Load(object sender, EventArgs e)
         {
-            var file = new FileInfo(@"baza\vozila.xml");
-            if(file.Length>0)
-            {
-
-            }
-
+            Load_XML();
         }
 
         private void Load_XML()
         {
-            var document = XDocument.Load(@"baza\vozila.xml");
+            try
+            {
+                XDocument document = XDocument.Load(@"baza\vozila.xml");
+                var voz = from x in document.Descendants("Vozilo")
+                      select new Vozilo
+                      {
+                          Model = (string)x.Element("Model"),
+                          BrKotaca = (int)x.Element("BrKotaca"),
+                          Godina = (long)x.Element("Godina"),
+                          Kategorija = (string)x.Element("Kategorija")
+                      };
 
-            var vozila = document.Root.Descendants("Vozilo")
-                .Select(x=>new Vozilo
+                foreach(var v in voz)
                 {
-                    Model = x.Element("Model").Value,
-                    BrKotaca = Convert.ToInt32(x.Element("BrKotaca").Value),
-
-                })
+                    vozila.Add(v);
+                }
+            }
+            catch(Exception ex) { }
             
         }
 
         private void Main_Close(object sender, EventArgs e)
         {
-            StvoriXML();
+            SaveXML();
         }
 
-        private void StvoriXML()
+        private void SaveXML()
         {
-            XDocument document = XDocument.Load(@"baza\vozila.xml");
+            try
+            {
+                var dokumentXmlVozila = new XDocument(new XElement("Vozila",
+                    from vozilo in vozila
+                    select new XElement("Vozilo",
+                        new XElement("Model", vozilo.Model),
+                        new XElement("BrKotaca", vozilo.BrKotaca),
+                        new XElement("Godina", vozilo.Godina),
+                        new XElement("Kategorija", vozilo.Kategorija)
+                        )));
 
-            var dokumentXmlVozila = new XDocument(new XElement("Vozila",
-                from vozilo in vozila
-                select new XElement("Vozilo",
-                    new XElement("Model", vozilo.Model),
-                    new XElement("BrKotaca", vozilo.BrKotaca),
-                    new XElement("Godina", vozilo.Godina),
-                    new XElement("Kategorija", vozilo.Kategorija)
-                    )));
+                dokumentXmlVozila.Save(@"baza\vozila.xml");
 
-            document.Save(Convert.ToString(dokumentXmlVozila));
+            }catch(Exception ex) { }
 
         }
 
