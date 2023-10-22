@@ -20,3 +20,4 @@ C:\Users\Piero\Documents\School\4.d\NiOP\Kolekcije-vozila\XML-kolekcije\obj\Debu
 C:\Users\Piero\Documents\School\4.d\NiOP\Kolekcije-vozila\XML-kolekcije\obj\Debug\XML-kolekcije.csproj.CoreCompileInputs.cache
 C:\Users\Piero\Documents\School\4.d\NiOP\Kolekcije-vozila\XML-kolekcije\obj\Debug\XML-kolekcije.exe
 C:\Users\Piero\Documents\School\4.d\NiOP\Kolekcije-vozila\XML-kolekcije\obj\Debug\XML-kolekcije.pdb
+C:\Users\Piero\Documents\School\4.d\NiOP\Kolekcije-vozila\XML-kolekcije\bin\Debug\baza\vozila.xml
